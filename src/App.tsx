@@ -5,11 +5,14 @@ import DocsPage from "@/pages/docs";
 import PricingPage from "@/pages/pricing";
 import BlogPage from "@/pages/blog";
 import AboutPage from "@/pages/about";
+import PortfolioPage from "@/pages/portfolio";
 
 function App() {
   return (
     <Routes>
       <Route element={<IndexPage />} path="/" />
+      <Route element={<PortfolioPage />} path="/portfolio" />
+
       <Route element={<DocsPage />} path="/docs" />
       <Route element={<PricingPage />} path="/pricing" />
       <Route element={<BlogPage />} path="/blog" />

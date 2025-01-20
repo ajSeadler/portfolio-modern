@@ -13,11 +13,11 @@ import {
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
+import { FaLinkedin } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
   GithubIcon,
   DiscordIcon,
   HeartFilledIcon,
@@ -83,8 +83,8 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.twitter} title="Twitter">
-            <TwitterIcon className="text-default-500" />
+          <Link isExternal href={siteConfig.links.twitter} title="Linkedin">
+            <FaLinkedin className="text-default-500" />
           </Link>
           <Link isExternal href={siteConfig.links.discord} title="Discord">
             <DiscordIcon className="text-default-500" />
@@ -104,7 +104,7 @@ export const Navbar = () => {
             startContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"
           >
-            Sponsor
+            Support
           </Button>
         </NavbarItem>
       </NavbarContent>

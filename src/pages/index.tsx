@@ -4,57 +4,75 @@ import { Snippet } from "@heroui/snippet";
 import { button as buttonStyles } from "@heroui/theme";
 
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
+import { subtitle, title } from "@/components/primitives";
+import TabsExample from "@/components/TabsExample";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 h-screen">
-        <div className="inline-block max-w-lg text-center justify-center">
-          <span className={title()}>Hi, I'm&nbsp;</span>
-          <span className={title({ color: "violet" })}>
-            Anthony Seadler&nbsp;
-          </span>
-          <br />
-          <span className={title()}>a Full Stack Web Developer.</span>
-          <div className={subtitle({ class: "mt-4" })}>
-            I live in Oklahoma City and specialize in building interactive web
-            applications with a focus on security and performance.
-          </div>
+      <section
+        className="flex flex-col items-center justify-center gap-8 py-12 md:py-16 h-auto md:h-4/6 w-full"
+        style={{
+          // background: "radial-gradient(circle, #726CDA 4%, transparent 50%)",
+          backgroundPosition: "center", // Ensure the gradient is centered
+          margin: "auto", // Center the section
+          padding: 0, // Override any padding set by the layout
+        }}
+      >
+        <div className="text-center">
+          <h1 className={title()}>
+            Hi, I'm&nbsp;
+            <span
+              className={title({ color: "violet", class: "font-extrabold" })}
+            >
+              Anthony Seadler&nbsp;
+            </span>
+            <br />
+            <span className={subtitle()}>Full Stack Web Developer.</span>
+          </h1>
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full items-center justify-center">
           <Link
             isExternal
             className={buttonStyles({
               color: "primary",
               radius: "full",
               variant: "shadow",
+              class: "px-6 py-3 text-lg sm:px-8 sm:py-4 sm:text-xl",
             })}
             href={siteConfig.links.docs}
           >
-            My Projects
+            <span style={{ color: "#fff" }}>My Projects</span>
           </Link>
           <Link
             isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
+            className={buttonStyles({
+              variant: "bordered",
+              radius: "full",
+              class: "px-6 py-3 text-lg sm:px-8 sm:py-4 sm:text-xl",
+            })}
             href={siteConfig.links.github}
           >
-            <GithubIcon size={20} />
+            <GithubIcon className="mr-2" size={20} />
             GitHub
           </Link>
         </div>
 
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="bordered">
-            <span>
-              Building modern applications with a blend of design and security.
-            </span>
+        <div className="mt-12">
+          <Snippet
+            hideCopyButton
+            hideSymbol
+            className="text-sm md:text-base"
+            variant="bordered"
+          >
+            <span>Take a look below.</span>
           </Snippet>
         </div>
       </section>
+      <TabsExample />
     </DefaultLayout>
   );
 }

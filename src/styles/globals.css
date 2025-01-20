@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.github-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.github-stats li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.github-stats li:last-child {
+  margin-bottom: 0;
+}
+
+.github-stats li:hover {
+  transform: translateX(5px);
+}
+
+.github-stats .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #06ba63;
+  color: white;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.github-stats strong {
+  margin-left: 1%;
+  font-weight: 700;
+}
+
+.github-stats li i {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
