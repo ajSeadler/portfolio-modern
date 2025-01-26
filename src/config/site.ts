@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Anthony Seadler",
+  description: "Fullstack Web Developer - Oklahoma City, Oklahoma",
   navItems: [
     {
       label: "Home",
@@ -27,24 +27,24 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Home",
+      href: "/",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "About",
+      href: "/about",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "Portfolio",
+      href: "/portfolio",
     },
     {
-      label: "Team",
-      href: "/team",
+      label: "Blog",
+      href: "/blog",
     },
     {
-      label: "Calendar",
-      href: "/calendar",
+      label: "Contact",
+      href: "/contact",
     },
     {
       label: "Settings",
@@ -53,10 +53,6 @@ export const siteConfig = {
     {
       label: "Help & Feedback",
       href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
     },
   ],
   links: {

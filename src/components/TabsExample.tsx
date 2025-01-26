@@ -34,7 +34,7 @@ export default function TabsExample() {
   }, []);
 
   return (
-    <div className="flex w-100 flex-col h-screen mx-auto">
+    <div className="flex w-100 flex-col mb-20 mx-auto">
       <Tabs aria-label="Options">
         <Tab key="about" title="About">
           <AboutTab githubStats={githubStats} />

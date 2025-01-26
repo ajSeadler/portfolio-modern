@@ -13,7 +13,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section
-        className="flex flex-col items-center justify-center gap-8 py-12 md:py-16 h-auto md:h-4/6 w-full"
+        className="flex flex-col items-center justify-center gap-8 h-screen  w-full"
         style={{
           // background: "radial-gradient(circle, #726CDA 4%, transparent 50%)",
           backgroundPosition: "center", // Ensure the gradient is centered

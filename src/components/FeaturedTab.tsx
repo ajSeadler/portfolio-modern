@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/no-redundant-roles */
@@ -7,9 +8,9 @@ import { FaUsers, FaLaptopCode, FaChartLine, FaRocket } from "react-icons/fa";
 import { Image } from "@heroui/image";
 
 const FeaturedTab = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const openModal = (imageSrc) => {
+  const openModal = (imageSrc: string) => {
     setSelectedImage(imageSrc);
   };
 
@@ -17,7 +18,7 @@ const FeaturedTab = () => {
     setSelectedImage(null);
   };
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: { key: string }) => {
     if (event.key === "Escape") {
       closeModal();
     }
@@ -27,33 +28,32 @@ const FeaturedTab = () => {
     <>
       <Card className="shadow-lg rounded-lg">
         <CardBody className="p-6">
-          <h3 className="text-2xl font-bold mb-4 flex items-center">
-            Featured Project | Filo
-          </h3>
-          <p className="">
+          <h2 className="text-2xl mb-4 font-bold">Featured Project | Filo</h2>
+          <p className="text-lg">
             Filo is a professional tech forum designed to connect developers,
             tech enthusiasts, and professionals in a collaborative and engaging
             environment. It serves as a platform for sharing knowledge, building
             communities, and showcasing expertise.
           </p>
 
-          <div className="mt-6 flex justify-center items-center space-x-4">
+          <div className="mt-6 flex flex-col md:flex-row justify-center items-center md:space-x-6 space-y-6 md:space-y-0">
             {["filo-home.png", "filo-profile.png", "filo-comm.png"].map(
               (image, index) => (
                 <button
                   key={index}
                   aria-label={`View ${image.split("-")[1].split(".")[0]} image`}
-                  className="w-1/4 rounded shadow cursor-pointer"
+                  className="rounded-lg shadow cursor-pointer"
                   role="button"
-                  tabIndex="0"
                   onClick={() => openModal(`/pictures/${image}`)}
                   onKeyDown={(e) =>
                     e.key === "Enter" && openModal(`/pictures/${image}`)
                   }
                 >
                   <Image
+                    isBlurred
+                    isZoomed
                     alt={`Filo ${image.split("-")[1].split(".")[0]}`}
-                    className="rounded shadow"
+                    className="rounded-lg shadow-md w-[280px] h-[180px] md:w-[400px] md:h-[250px] object-cover"
                     src={`/pictures/${image}`}
                   />
                 </button>
@@ -62,7 +62,7 @@ const FeaturedTab = () => {
           </div>
 
           <div className="mt-6">
-            <h4 className="text-xl font-semibold mb-3">Key Features</h4>
+            <h3 className="text-2xl font-semibold mb-3">Key Features</h3>
             <ul className="list-none space-y-4">
               <li className="flex items-center">
                 <FaUsers className="mr-3" />
@@ -108,7 +108,7 @@ const FeaturedTab = () => {
           <div className="relative">
             <Image
               alt="Enlarged view"
-              className="max-w-full max-h-screen rounded"
+              className="max-w-[90%] max-h-[90%] rounded-lg"
               src={selectedImage}
             />
             <button

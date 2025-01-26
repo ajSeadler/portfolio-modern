@@ -11,9 +11,11 @@ import {
   SiPython,
   SiVite,
   SiFlask,
+  SiWireshark,
 } from "react-icons/si";
 import { FaLinux, FaNode, FaWindows, FaGithub } from "react-icons/fa";
-import { subtitle, title } from "./primitives";
+import { Image } from "@heroui/image";
+import { FaDiscord, FaLinkedin } from "react-icons/fa6";
 
 interface GithubStats {
   avatarUrl: string;
@@ -26,119 +28,125 @@ const AboutTab = ({ githubStats }: { githubStats: GithubStats }) => {
     <Card className="p-4">
       <CardBody>
         {/* Avatar and Bio Section */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-          <img
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+          <Image
+            isBlurred
             alt="Avatar"
-            className="w-28 h-28 rounded-full border border-gray-400"
-            src={githubStats.avatarUrl}
+            className="w-44 h-44"
+            src="/pictures/me.jpg"
           />
-          <div className="text-center md:text-left">
-            <h4 className={title()}>
+          <div className="text-left md:text-left">
+            <h1 className="text-2xl font-bold">
               Fullstack Developer & Network Enthusiast
-            </h4>
-            <p className={subtitle()}>
+            </h1>
+            <p className="text-md text-gray-500">
               {githubStats.location} | anthonyseadler@gmail.com
-            </p>{" "}
-            <Link
-              isExternal
-              className="flex flex-col sm:flex-row items-center gap-2 hover:text-violet-600 visited:text-current transition-colors duration-300 p-2"
-              href="https://github.com/ajSeadler"
-              style={{ textDecoration: "none" }}
-            >
-              <FaGithub size={30} />
-              <span className="font-semibold">Visit GitHub</span>
-            </Link>
+            </p>
+            <div className="flex gap-2">
+              <Link
+                isExternal
+                className="flex items-center gap-2 text-violet-600 hover:text-violet-500 transition-colors duration-300 mt-2"
+                href="https://github.com/ajSeadler"
+                style={{ textDecoration: "none" }}
+              >
+                <FaLinkedin size={30} style={{ color: "gray" }} />
+              </Link>
+              <Link
+                isExternal
+                className="flex items-center gap-2 text-violet-600 hover:text-violet-500 transition-colors duration-300 mt-2"
+                href="https://github.com/ajSeadler"
+                style={{ textDecoration: "none" }}
+              >
+                <FaDiscord size={30} style={{ color: "gray" }} />
+              </Link>
+              <Link
+                isExternal
+                className="flex items-center gap-2 text-violet-600 hover:text-violet-500 transition-colors duration-300 mt-2"
+                href="https://github.com/ajSeadler"
+                style={{ textDecoration: "none" }}
+              >
+                <FaGithub size={30} style={{ color: "gray" }} />
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Bio and Technologies Section */}
-        <div className="mt-1">
-          <p className={subtitle()}>
+        <div className="mt-6">
+          <p className="text-md">
             My name is Anthony Seadler, but most people call me AJ. I'm a
             full-stack web developer based in Oklahoma City, Oklahoma. I
             specialize in building various types of applications and web
             solutions using technologies like TypeScript, React (JSX/TSX),
             Express, PostgreSQL, and Python, among others.
           </p>
-          <p className={subtitle()}>
+          <p className="text-md mt-4">
             My favorite tools include TypeScript, JavaScript, and React. I also
             enjoy working with databases like PostgreSQL and MySQL. Here are the
             technologies I use most frequently:
           </p>
+
           {/* Responsive Technology Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-6">
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiJavascript className="text-4xl text-yellow-500 mb-2" />
-                <p className="font-semibold">JavaScript</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiTypescript className="text-4xl text-blue-500 mb-2" />
-                <p className="font-semibold">TypeScript</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiHtml5 className="text-4xl text-orange-500 mb-2" />
-                <p className="font-semibold">HTML5</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiCss3 className="text-4xl text-blue-600 mb-2" />
-                <p className="font-semibold">CSS3</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <FaNode className="text-4xl text-green-600 mb-2" />
-                <p className="font-semibold">Node.js</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiPostgresql className="text-4xl text-blue-500 mb-2" />
-                <p className="font-semibold">PostgreSQL</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiExpress className="text-4xl text-gray-700 mb-2" />
-                <p className="font-semibold">Express</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiPython className="text-4xl text-yellow-500 mb-2" />
-                <p className="font-semibold">Python</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <FaLinux className="text-4xl text-orange-700 mb-2" />
-                <p className="font-semibold">Linux</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <FaWindows className="text-4xl text-blue-500 mb-2" />
-                <p className="font-semibold">Windows</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiVite className="text-4xl text-purple-500 mb-2" />
-                <p className="font-semibold">Vite</p>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody className="flex flex-col items-center text-center">
-                <SiFlask className="text-4xl text-gray-600 mb-2" />
-                <p className="font-semibold">Flask</p>
-              </CardBody>
-            </Card>
+            {/* Map through technologies */}
+            {[
+              {
+                icon: <SiJavascript className="text-4xl text-yellow-500" />,
+                label: "JavaScript",
+              },
+              {
+                icon: <SiTypescript className="text-4xl text-blue-500" />,
+                label: "TypeScript",
+              },
+              {
+                icon: <SiWireshark className="text-4xl text-blue-600" />,
+                label: "Wireshark",
+              },
+              {
+                icon: <SiPython className="text-4xl text-yellow-500" />,
+                label: "Python",
+              },
+              {
+                icon: <FaLinux className="text-4xl text-orange-700" />,
+                label: "Linux",
+              },
+              {
+                icon: <FaWindows className="text-4xl text-blue-500" />,
+                label: "Windows",
+              },
+              {
+                icon: <SiHtml5 className="text-4xl text-orange-500" />,
+                label: "HTML5",
+              },
+              {
+                icon: <SiCss3 className="text-4xl text-blue-600" />,
+                label: "CSS3",
+              },
+              {
+                icon: <FaNode className="text-4xl text-green-600" />,
+                label: "Node.js",
+              },
+              {
+                icon: <SiPostgresql className="text-4xl text-blue-500" />,
+                label: "PostgreSQL",
+              },
+              {
+                icon: <SiExpress className="text-4xl text-gray-700" />,
+                label: "Express",
+              },
+
+              {
+                icon: <SiVite className="text-4xl text-purple-500" />,
+                label: "Vite",
+              },
+            ].map(({ icon, label }, index) => (
+              <Card key={index}>
+                <CardBody className="flex flex-col items-center text-center">
+                  <div className="mb-2">{icon}</div>
+                  <p className="font-medium text-sm">{label}</p>
+                </CardBody>
+              </Card>
+            ))}
           </div>
         </div>
       </CardBody>
