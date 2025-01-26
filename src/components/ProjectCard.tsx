@@ -52,7 +52,7 @@ const ProjectCard = ({
         />
         {/* Heart Icon */}
         <div
-          className="absolute bottom-2 right-2 z-50"
+          className="absolute bottom-2 right-2 z-20"
           onClick={handleConfetti} // Trigger confetti on heart click
         >
           <HeartFilledIcon className="text-red-500 text-xl" />

@@ -9,15 +9,17 @@ import PortfolioPage from "@/pages/portfolio";
 
 function App() {
   return (
-    <Routes>
-      <Route element={<IndexPage />} path="/" />
-      <Route element={<PortfolioPage />} path="/portfolio" />
+    <>
+      <Routes>
+        <Route element={<IndexPage />} path="/" />
+        <Route element={<PortfolioPage />} path="/portfolio" />
 
-      <Route element={<DocsPage />} path="/docs" />
-      <Route element={<PricingPage />} path="/pricing" />
-      <Route element={<BlogPage />} path="/blog" />
-      <Route element={<AboutPage />} path="/about" />
-    </Routes>
+        <Route element={<DocsPage />} path="/docs" />
+        <Route element={<PricingPage />} path="/pricing" />
+        <Route element={<BlogPage />} path="/blog" />
+        <Route element={<AboutPage />} path="/about" />
+      </Routes>
+    </>
   );
 }
 
