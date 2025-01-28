@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* hide page scrollbar */
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+/* Firefox */
+body {
+  -ms-overflow-style: none;
+}
+
+/* IE and Edge */
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Chrome */
+/* end hide page scrollbar */
+
 .github-stats {
   list-style: none;
   padding: 0;

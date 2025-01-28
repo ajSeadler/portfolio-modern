@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import { Navbar } from "@/components/navbar";
-import ScrollProgressBar from "@/components/ScrollProgressBar"; // Import the scroll progress bar
+// import ScrollProgressBar from "@/components/ScrollProgressBar";
 
 export default function DefaultLayout({
   children,
@@ -10,7 +10,7 @@ export default function DefaultLayout({
   return (
     <div className="flex flex-col min-h-screen">
       {/* Scroll progress bar positioned globally */}
-      <ScrollProgressBar />
+      {/* <ScrollProgressBar /> */}
       {/* Navbar positioned statically (scrolls with the page) */}
       <Navbar />
       {/* Main content area grows if content exceeds the viewport */}

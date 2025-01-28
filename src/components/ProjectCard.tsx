@@ -4,20 +4,35 @@ import { Image } from "@heroui/image";
 import {
   Modal,
   ModalContent,
-  ModalHeader,
   ModalBody,
   ModalFooter,
   useDisclosure,
 } from "@heroui/modal";
-import { Button } from "@heroui/button";
 import confetti from "canvas-confetti"; // Import confetti
+import {
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiPython,
+  SiFlask,
+} from "react-icons/si"; // Import tech icons
+import { FiExternalLink } from "react-icons/fi"; // Import external link icon
+import { Button } from "@heroui/button";
+import { Snippet } from "@heroui/snippet";
 
 import { HeartFilledIcon } from "./icons";
 
 const ProjectCard = ({
   project,
 }: {
-  project: { id: number; src: string; title: string; description: string };
+  project: {
+    id: number;
+    src: string;
+    title: string;
+    description: string;
+    techStack: string[];
+    link: string;
+  };
 }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -50,7 +65,37 @@ const ProjectCard = ({
           width={420}
           onClick={onOpen}
         />
-        {/* Heart Icon */}
+
+        {/* Tech Stack Bar with Icons */}
+        <div className="absolute bottom-0 left-0 w-full backdrop-blur-2xl py-2 px-3 flex space-x-2 rounded-b-lg z-10">
+          {project.techStack.map((tech) => {
+            switch (tech) {
+              case "TypeScript":
+                return (
+                  <SiTypescript key={tech} className="text-blue-600 text-xl" />
+                );
+              case "JavaScript":
+                return (
+                  <SiJavascript
+                    key={tech}
+                    className="text-yellow-500 text-xl"
+                  />
+                );
+              case "React":
+                return <SiReact key={tech} className="text-blue-400 text-xl" />;
+              case "Python":
+                return (
+                  <SiPython key={tech} className="text-green-600 text-xl" />
+                );
+              case "Flask":
+                return <SiFlask key={tech} className="text-gray-500 text-xl" />;
+              default:
+                return null;
+            }
+          })}
+        </div>
+
+        {/* Heart Icon on the right */}
         <div
           className="absolute bottom-2 right-2 z-20"
           onClick={handleConfetti} // Trigger confetti on heart click
@@ -70,17 +115,73 @@ const ProjectCard = ({
         >
           {(onClose: any) => (
             <>
-              <ModalHeader>{project.title}</ModalHeader>
               <ModalBody>
                 <Image
                   alt={project.title}
                   className="rounded-md"
                   src={project.src}
                 />
+                <Snippet hideCopyButton hideSymbol>
+                  {project.title}
+                </Snippet>
+                {/* Tech Stack Bar with Icons */}
+                <div className=" py-2 px-3 flex space-x-2 rounded-b-lg z-10">
+                  {project.techStack.map((tech) => {
+                    switch (tech) {
+                      case "TypeScript":
+                        return (
+                          <SiTypescript
+                            key={tech}
+                            className="text-blue-600 text-xl"
+                          />
+                        );
+                      case "JavaScript":
+                        return (
+                          <SiJavascript
+                            key={tech}
+                            className="text-yellow-500 text-xl"
+                          />
+                        );
+                      case "React":
+                        return (
+                          <SiReact
+                            key={tech}
+                            className="text-blue-400 text-xl"
+                          />
+                        );
+                      case "Python":
+                        return (
+                          <SiPython
+                            key={tech}
+                            className="text-green-600 text-xl"
+                          />
+                        );
+                      case "Flask":
+                        return (
+                          <SiFlask
+                            key={tech}
+                            className="text-gray-500 text-xl"
+                          />
+                        );
+                      default:
+                        return null;
+                    }
+                  })}
+                </div>
                 <p className="mt-4">{project.description}</p>
+                {/* Link to Project */}
+                <a
+                  className="inline-flex items-center mt-4 px-4 py-2 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-800 transition-colors focus:outline-none"
+                  href={project.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <FiExternalLink className="mr-2 text-lg" />
+                  View Project
+                </a>
               </ModalBody>
               <ModalFooter>
-                <Button color="primary" onPress={onClose}>
+                <Button color="danger" variant="ghost" onPress={onClose}>
                   Close
                 </Button>
               </ModalFooter>
@@ -100,36 +201,40 @@ export default function ProjectGallery() {
       title: "Filo - Social Tech Forum",
       description:
         "Filo is a blah blah blah blah blah blah blah blah blah blah",
+      techStack: ["JavaScript", "React"],
+      link: "https://example.com/filo",
     },
     {
       id: 2,
       src: "/pictures/skate-tracker.png",
-      title: "Project 2",
-      description: "This is a description for Project 2.",
+      title: "SkateTracker",
+      description: "SkateTracker is a blah blah blah.",
+      techStack: ["JavaScript", "React"],
+      link: "https://example.com/skate-tracker",
     },
     {
       id: 3,
       src: "/pictures/network-speed.png",
-      title: "Project 3",
-      description: "This is a description for Project 3.",
+      title: "Network Speed Test",
+      description: "Network Speed Test is a blah blah blah blah.",
+      techStack: ["Python", "Flask"],
+      link: "https://example.com/network-speed",
     },
     {
       id: 4,
       src: "/pictures/cof.png",
-      title: "Project 1",
-      description: "This is a description for Project 1.",
+      title: "Circle of Fifths Viewer",
+      description: "Circle of Fifths viewer is a blah blah blah blah.",
+      techStack: ["JavaScript", "React"],
+      link: "https://example.com/circle-of-fifths",
     },
     {
       id: 5,
-      src: "/pictures/no-image.jpg",
-      title: "Project 2",
-      description: "This is a description for Project 2.",
-    },
-    {
-      id: 6,
-      src: "/pictures/no-image.jpg",
-      title: "Project 3",
-      description: "This is a description for Project 3.",
+      src: "/pictures/ds-site.png",
+      title: "Disco Stranger - Band website",
+      description: "Disco Stranger is a blah blah blah blah.",
+      techStack: ["TypeScript", "React"],
+      link: "https://example.com/disco-stranger",
     },
   ];
 

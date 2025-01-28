@@ -10,7 +10,6 @@ import {
   SiExpress,
   SiPython,
   SiVite,
-  SiFlask,
   SiWireshark,
 } from "react-icons/si";
 import { FaLinux, FaNode, FaWindows, FaGithub } from "react-icons/fa";
@@ -25,7 +24,7 @@ interface GithubStats {
 
 const AboutTab = ({ githubStats }: { githubStats: GithubStats }) => {
   return (
-    <Card className="p-4">
+    <Card className="p-2">
       <CardBody>
         {/* Avatar and Bio Section */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">

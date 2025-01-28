@@ -20,9 +20,20 @@ const ScrollProgressBar: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed left-0  transform -translate-y-screen h-screen w-1 bg-black-200 z-10">
-      <div className="w-full bg-blue-500" style={{ height: `${scrollTop}%` }} />
-    </div>
+    <>
+      <div className="fixed left-0  transform -translate-y-screen h-screen w-2 bg-black-200 z-10">
+        <div
+          className="w-full bg-violet-500"
+          style={{ height: `${scrollTop}%` }}
+        />
+      </div>
+      <div className="fixed right-0  transform -translate-y-screen h-screen w-2 bg-black-200 z-10">
+        <div
+          className="w-full bg-violet-500"
+          style={{ height: `${scrollTop}%` }}
+        />
+      </div>
+    </>
   );
 };
 

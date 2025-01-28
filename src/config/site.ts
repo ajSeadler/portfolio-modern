@@ -46,20 +46,12 @@ export const siteConfig = {
       label: "Contact",
       href: "/contact",
     },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
   ],
   links: {
-    github: "https://github.com/frontio-ai/heroui",
-    twitter: "https://twitter.com/hero_ui",
+    github: "https://github.com/ajSeadler",
+    twitter: "https://twitter.com/",
     docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    discord: "https://discord.com",
+    sponsor: "https://github.com/ajSeadler",
   },
 };

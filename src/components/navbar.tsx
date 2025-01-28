@@ -104,7 +104,7 @@ export const Navbar = () => {
             startContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"
           >
-            Support
+            Like This Site?
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -122,17 +122,7 @@ export const Navbar = () => {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href={item.href}
-                size="lg"
-              >
+              <Link href={item.href} size="lg" style={{ color: "#fff" }}>
                 {item.label}
               </Link>
             </NavbarMenuItem>
