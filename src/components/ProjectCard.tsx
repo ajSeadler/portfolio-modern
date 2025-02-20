@@ -106,6 +106,7 @@ const ProjectCard = ({
 
       {/* Modal */}
       <Modal
+        hideCloseButton
         className="animate-slide-up"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
@@ -196,19 +197,38 @@ const ProjectCard = ({
 export default function ProjectGallery() {
   const projects = [
     {
-      id: 1,
-      src: "/pictures/filo-home.png",
+      id: 6,
+      src: "/pictures/skate-bg-min.png",
       title: "Filo - Social Tech Forum",
       description:
-        "Filo is a blah blah blah blah blah blah blah blah blah blah",
+        "Filo is a blah blah blah blah blah blah blah blah blah blah Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis rerum molestias iusto in maiores obcaecati. Quisquam sed, dolor accusantium, magnam magni assumenda ducimus repudiandae facere officia in, error voluptatem perspiciatis?",
       techStack: ["JavaScript", "React"],
       link: "https://example.com/filo",
     },
     {
+      id: 1,
+      src: "/pictures/filo-bg-min.png",
+      title: "Filo - Social Tech Forum",
+      description:
+        "Filo is a blah blah blah blah blah blah blah blah blah blah Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis rerum molestias iusto in maiores obcaecati. Quisquam sed, dolor accusantium, magnam magni assumenda ducimus repudiandae facere officia in, error voluptatem perspiciatis?",
+      techStack: ["JavaScript", "React"],
+      link: "https://example.com/filo",
+    },
+    {
+      id: 4,
+      src: "/pictures/cof-desk-min.png",
+      title: "Circle of Fifths Viewer",
+      description:
+        "Circle of Fifths viewer is a blah blah blah blah. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis rerum molestias iusto in maiores obcaecati. Quisquam sed, dolor accusantium, magnam magni assumenda ducimus repudiandae facere officia in, error voluptatem perspiciatis?",
+      techStack: ["JavaScript", "React"],
+      link: "https://example.com/circle-of-fifths",
+    },
+    {
       id: 2,
-      src: "/pictures/skate-tracker.png",
+      src: "/pictures/skate-tracker-desk-min.png",
       title: "SkateTracker",
-      description: "SkateTracker is a blah blah blah.",
+      description:
+        "SkateTracker is a blah blah blah. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis rerum molestias iusto in maiores obcaecati. Quisquam sed, dolor accusantium, magnam magni assumenda ducimus repudiandae facere officia in, error voluptatem perspiciatis?",
       techStack: ["JavaScript", "React"],
       link: "https://example.com/skate-tracker",
     },
@@ -216,23 +236,18 @@ export default function ProjectGallery() {
       id: 3,
       src: "/pictures/network-speed.png",
       title: "Network Speed Test",
-      description: "Network Speed Test is a blah blah blah blah.",
+      description:
+        "Network Speed Test is a blah blah blah blah. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis rerum molestias iusto in maiores obcaecati. Quisquam sed, dolor accusantium, magnam magni assumenda ducimus repudiandae facere officia in, error voluptatem perspiciatis?",
       techStack: ["Python", "Flask"],
       link: "https://example.com/network-speed",
     },
-    {
-      id: 4,
-      src: "/pictures/cof.png",
-      title: "Circle of Fifths Viewer",
-      description: "Circle of Fifths viewer is a blah blah blah blah.",
-      techStack: ["JavaScript", "React"],
-      link: "https://example.com/circle-of-fifths",
-    },
+
     {
       id: 5,
       src: "/pictures/ds-site.png",
       title: "Disco Stranger - Band website",
-      description: "Disco Stranger is a blah blah blah blah.",
+      description:
+        "Disco Stranger is a blah blah blah blah. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis rerum molestias iusto in maiores obcaecati. Quisquam sed, dolor accusantium, magnam magni assumenda ducimus repudiandae facere officia in, error voluptatem perspiciatis?",
       techStack: ["TypeScript", "React"],
       link: "https://example.com/disco-stranger",
     },

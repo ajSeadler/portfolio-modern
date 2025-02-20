@@ -6,7 +6,7 @@ import ProjectGallery from "@/components/ProjectCard";
 export default function DocsPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-left justify-center gap-4 py-8 md:py-10">
+      <section className="flex flex-col items-left justify-center gap-4 py-0 md:py-0">
         <div className="inline-block max-w-lg text-left justify-left">
           <h1 className={title()}>Portfolio</h1>
           <p className={subtitle()}>

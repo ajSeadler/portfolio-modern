@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Healthy Morning Habits",
+    "description": "Practical morning habits to boost productivity and keep a sharp mind for coding and problem-solving.",
+    "post": "Starting the day right can make all the difference, especially when juggling development and cybersecurity. Waking up early allows time for reflection, planning, and mindfulness before diving into code or security tasks. A few key habits:\n\n- **Morning exercise:** Whether it’s a quick jog or stretching, getting the blood flowing clears the mind.\n- **Focused reading:** Skimming articles about the latest trends in web development or networking ensures you're always learning.\n- **Healthy breakfast:** A balanced meal keeps energy levels stable—critical for debugging or deep work.\n\nA solid routine doesn’t just enhance productivity; it helps manage the mental load of a busy tech life.",
+    "date": "01-22-2025",
+    "readingTime": "2 min",
+    "coverImage": "/pictures/morning.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Wild, Wild, West",
+    "description": "My travels through the American West, balancing adventure with connectivity.",
+    "post": "From the plains of Oklahoma to the deserts of Arizona and the neon of Las Vegas, these travels were a mix of unplugged exploration and staying connected.\n\n- **Oklahoma:** Nothing beats starting with home. A reminder of roots before the road called.\n- **Arizona:** Inspired by the natural wonders, like the Grand Canyon, I found moments of clarity—perfect for brainstorming design ideas.\n- **Las Vegas:** Amidst the lights and energy, it was fascinating to see the tech behind the city's entertainment systems.\n\nTraveling as a web developer meant finding ways to stay productive on the go while embracing the spirit of adventure. These trips inspired more than just personal growth—they sparked fresh perspectives for my projects.",
+    "date": "01-15-2025",
+    "readingTime": "3 min",
+    "coverImage": "/pictures/scottsdale.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Joy of Music",
+    "description": "From jam sessions to debugging sessions—how music has shaped my journey in development and cybersecurity.",
+    "post": "Music has always been a creative outlet, but it’s also deeply connected to how I approach problem-solving.\n\n- **Jamming with friends** taught collaboration, which directly translates to working on dev teams.\n- **Playing guitar** helped me develop focus and patience, which comes in handy while troubleshooting network issues or writing complex code.\n- **Music theory and coding** share a structure. Both require understanding patterns and building on them.\n\nListening to music while coding creates flow, making even the most mundane debugging sessions feel inspired. Music isn’t just a hobby—it’s a framework for creativity and discipline in every aspect of life.",
+    "date": "01-10-2025",
+    "readingTime": "4 min",
+    "coverImage": "/pictures/amps.jpg"
+  }
+]

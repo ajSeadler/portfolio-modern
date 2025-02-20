@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <DefaultLayout>
       {/* About Me Section */}
-      <section className="py-10 sm:py-20 flex items-center justify-center">
+      <section className="py-0 sm:py-0 flex items-center justify-center">
         <div className="max-w-full sm:max-w-7xl w-full flex flex-col md:flex-row items-center px-4">
           <div className="text-left md:text-left w-full">
             <h2 className={`${title()} text-3xl sm:text-4xl md:text-5xl`}>
